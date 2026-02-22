@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0;
+    /* Warm cream background */
+    --background: 0.97 0.015 75;
+    /* Deep charcoal foreground */
+    --foreground: 0.25 0.01 30;
+    /* Slightly warmer card background */
+    --card: 0.98 0.012 70;
+    --card-foreground: 0.25 0.01 30;
+    --popover: 0.98 0.012 70;
+    --popover-foreground: 0.25 0.01 30;
+    /* Terracotta primary - warm clay */
+    --primary: 0.55 0.14 35;
+    --primary-foreground: 0.99 0.01 75;
+    /* Soft taupe secondary */
+    --secondary: 0.85 0.02 55;
+    --secondary-foreground: 0.25 0.01 30;
+    /* Warm muted taupe */
+    --muted: 0.88 0.02 60;
+    --muted-foreground: 0.45 0.015 40;
+    /* Deeper rust accent */
+    --accent: 0.48 0.16 30;
+    --accent-foreground: 0.99 0.01 75;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.99 0.01 75;
+    /* Subtle warm borders */
+    --border: 0.88 0.02 60;
+    --input: 0.88 0.02 60;
+    --ring: 0.55 0.14 35;
+    --chart-1: 0.55 0.14 35;
+    --chart-2: 0.48 0.16 30;
+    --chart-3: 0.65 0.12 50;
+    --chart-4: 0.42 0.18 25;
+    --chart-5: 0.72 0.08 65;
+    --sidebar: 0.98 0.012 70;
+    --sidebar-foreground: 0.25 0.01 30;
+    --sidebar-primary: 0.55 0.14 35;
+    --sidebar-primary-foreground: 0.99 0.01 75;
+    --sidebar-accent: 0.88 0.02 60;
+    --sidebar-accent-foreground: 0.25 0.01 30;
+    --sidebar-border: 0.88 0.02 60;
+    --sidebar-ring: 0.55 0.14 35;
+  }
+
+  .dark {
+    /* Deep warm charcoal background */
+    --background: 0.18 0.015 30;
+    /* Warm cream foreground */
+    --foreground: 0.95 0.015 75;
+    /* Slightly lighter card */
+    --card: 0.22 0.02 35;
+    --card-foreground: 0.95 0.015 75;
+    --popover: 0.22 0.02 35;
+    --popover-foreground: 0.95 0.015 75;
+    /* Lighter terracotta for dark mode */
+    --primary: 0.68 0.14 35;
+    --primary-foreground: 0.18 0.015 30;
+    /* Muted warm gray */
+    --secondary: 0.32 0.02 40;
+    --secondary-foreground: 0.95 0.015 75;
+    --muted: 0.28 0.02 35;
+    --muted-foreground: 0.65 0.02 50;
+    /* Accent rust */
+    --accent: 0.58 0.16 30;
+    --accent-foreground: 0.95 0.015 75;
+    --destructive: 0.62 0.20 25;
+    --destructive-foreground: 0.95 0.015 75;
+    --border: 0.32 0.02 40;
+    --input: 0.32 0.02 40;
+    --ring: 0.68 0.14 35;
+    --chart-1: 0.68 0.14 35;
+    --chart-2: 0.58 0.16 30;
+    --chart-3: 0.75 0.10 50;
+    --chart-4: 0.52 0.18 25;
+    --chart-5: 0.82 0.08 65;
+    --sidebar: 0.22 0.02 35;
+    --sidebar-foreground: 0.95 0.015 75;
+    --sidebar-primary: 0.68 0.14 35;
+    --sidebar-primary-foreground: 0.18 0.015 30;
+    --sidebar-accent: 0.32 0.02 40;
+    --sidebar-accent-foreground: 0.95 0.015 75;
+    --sidebar-border: 0.32 0.02 40;
+    --sidebar-ring: 0.68 0.14 35;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lora', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+  }
+
+  /* Smooth scroll snap behavior */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Enhanced focus visibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
