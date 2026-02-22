@@ -131,7 +131,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
       {/* Header Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-border">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <button
